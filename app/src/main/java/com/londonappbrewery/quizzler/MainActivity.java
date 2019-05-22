@@ -2,6 +2,11 @@ package com.londonappbrewery.quizzler;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -9,6 +14,11 @@ public class MainActivity extends Activity {
 
 
     // TODO: Declare member variables here:
+    Button mTrueButton;
+    Button mFalseButton;
+    TextView mScoreTextView;
+    TextView mQuestionTextView;
+    ProgressBar mProgressBar;
 
 
     // TODO: Uncomment to create question bank
@@ -33,7 +43,57 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mTrueButton = findViewById(R.id.true_button);
+        mFalseButton = findViewById(R.id.false_button);
+        mScoreTextView = findViewById(R.id.score);
+        mQuestionTextView = findViewById(R.id.question_text_view);
+        mProgressBar = findViewById(R.id.progress_bar);
 
+
+        mTrueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "True", Toast.LENGTH_SHORT).show();
+                checkAnswer(true);
+                updateQuestion();
+            }
+        });
+
+        mFalseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "False", Toast.LENGTH_SHORT).show();
+                checkAnswer(false);
+                updateQuestion();
+            }
+        });
+
+    }
+
+       /* public class TrueFalse{
+            private int mQuestion;
+            private boolean mAswer;
+
+            public TrueFalse(int questionId, int trueOrFalse){
+                return;
+            }
+
+            public int getQuestion() {
+                return 0;
+            }
+
+            public boolean mAswer(){
+                return mAswer;
+            };
+
+
+        }*/
+
+    private boolean checkAnswer(boolean b) {
+        return b;
+    }
+
+    private void updateQuestion() {
 
     }
 }
