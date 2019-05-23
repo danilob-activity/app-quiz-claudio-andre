@@ -72,8 +72,7 @@
             android:background="@color/colorFalseButton"
             android:textColor="@color/colorText"
             android:textStyle="bold"
-            android:textSize="20sp"
-            android:onClick="ClickFalse"/>
+            android:textSize="20sp"/>
     </LinearLayout>
 
 </RelativeLayout>
