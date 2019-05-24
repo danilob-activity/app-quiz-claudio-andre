@@ -8,16 +8,18 @@ public class TrueFalse {
     private int mQuestion;
     private boolean mAnswer;
 
-    public TrueFalse(int question, boolean aswer) {
+    public TrueFalse(int question, boolean answer) {
         mQuestion = question;
-        mAnswer = aswer;
+        mAnswer = answer;
     }
 
     public int getQuestion() {
+
         return mQuestion;
     }
 
     public boolean mAnswer() {
-        return false;
+
+        return mAnswer;
     }
 }
